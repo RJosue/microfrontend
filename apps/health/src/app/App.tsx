@@ -5,6 +5,7 @@ import { Debug } from '../pages';
 import { IonRouterOutlet } from '@ionic/react';
 
 const Telemedicine = React.lazy(() => import('telemedicine/Module'));
+const Reimbursement = React.lazy(() => import('reimbursement/Module'));
 
 type NavigationContext = {
   initialRoute: string;
@@ -21,6 +22,13 @@ const TelemedicineWrapper = () => {
     </React.Suspense>
   );
 };
+const ReimbursementWrapper = () => {
+  return (
+    <React.Suspense fallback={<h1>Loading...</h1>}>
+      <Reimbursement />
+    </React.Suspense>
+  );
+};
 
 export function App() {
   const { initialRoute } =
@@ -31,7 +39,8 @@ export function App() {
       <Route path="/" exact>
         {initialRoute !== '/' ? <Redirect to={initialRoute} /> : <Debug />}
       </Route>
-      <Route path="/telemedicine" render={TelemedicineWrapper}></Route>
+      <Route path="/telemedicine" render={TelemedicineWrapper} />
+      <Route path="/reimbursement" render={ReimbursementWrapper} />
     </IonRouterOutlet>
   );
 }

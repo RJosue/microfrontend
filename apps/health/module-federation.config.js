@@ -1,4 +1,4 @@
 module.exports = {
   name: 'health',
-  remotes: ['telemedicine'],
+  remotes: ['telemedicine', 'reimbursement'],
 };

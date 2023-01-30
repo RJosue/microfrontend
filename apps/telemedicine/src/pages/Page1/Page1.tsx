@@ -15,6 +15,9 @@ const Page1 = (): React.ReactElement => {
         >
           Navigate to Page 2
         </IonButton>
+        <IonButton expand="block" onClick={() => router.push('/reimbursement')}>
+          Navigate to Reimbursement
+        </IonButton>
       </IonContent>
     </IonPage>
   );

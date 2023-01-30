@@ -26,6 +26,10 @@ const prodConfig = {
       'telemedicine',
       'https://super-app-federation.s3.us-east-2.amazonaws.com/telemedicine/remoteEntry.js',
     ],
+    [
+      'reimbursement',
+      'https://super-app-federation.s3.us-east-2.amazonaws.com/reimbursement/remoteEntry.js',
+    ],
   ],
 };
 
