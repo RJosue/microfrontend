@@ -1,0 +1,10 @@
+{
+  "apps": [
+    {
+      "appId": "fc5f1e4d",
+      "root": "apps/health",
+      "dependencyInstallCommand": "yarn install",
+      "webBuildCommand": "nx run health:build:production"
+    }
+  ]
+}
