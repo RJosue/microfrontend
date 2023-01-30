@@ -1,8 +1,8 @@
 import React from 'react';
 import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
 import { IonApp, setupIonicReact } from '@ionic/react';
+import { IonReactRouter } from '@ionic/react-router';
 
 import App from './app/App';
 
@@ -21,21 +21,19 @@ import '@ionic/react/css/text-alignment.css';
 import '@ionic/react/css/text-transformation.css';
 import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
-import { IonReactRouter } from '@ionic/react-router';
 
 setupIonicReact();
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
 root.render(
   <StrictMode>
-    <BrowserRouter>
-      <IonApp>
-        <IonReactRouter>
-          <App />
-        </IonReactRouter>
-      </IonApp>
-    </BrowserRouter>
+    <IonApp>
+      <IonReactRouter>
+        <App />
+      </IonReactRouter>
+    </IonApp>
   </StrictMode>
 );
