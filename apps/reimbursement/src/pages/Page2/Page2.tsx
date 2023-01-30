@@ -7,16 +7,16 @@ const Page2 = (): React.ReactElement => {
 
   return (
     <IonPage>
-      <Header backText="Back">Page 2</Header>
+      <Header backText="Back">Reimbursement Page 2</Header>
       <IonContent className="ion-padding">
         <IonButton
           expand="block"
-          onClick={() => router.push('/telemedicine/page1')}
+          onClick={() => router.push('/reimbursement/page1')}
         >
           Navigate to Page 1
         </IonButton>
-        <IonButton expand="block" onClick={() => router.push('/reimbursement')}>
-          Navigate to Reimbursement
+        <IonButton expand="block" onClick={() => router.push('/telemedicine')}>
+          Navigate to MFE Telemedicine
         </IonButton>
       </IonContent>
     </IonPage>

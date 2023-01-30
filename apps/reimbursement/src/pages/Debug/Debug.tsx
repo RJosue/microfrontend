@@ -2,25 +2,27 @@ import { IonButton, IonContent, IonPage, useIonRouter } from '@ionic/react';
 import React from 'react';
 import { Header } from '../../components';
 
-const Page2 = (): React.ReactElement => {
+const Debug = (): React.ReactElement => {
   const router = useIonRouter();
-
   return (
     <IonPage>
-      <Header backText="Back">Page 2</Header>
+      <Header>Reimbursement</Header>
       <IonContent className="ion-padding">
         <IonButton
           expand="block"
-          onClick={() => router.push('/telemedicine/page1')}
+          onClick={() => router.push('/reimbursement/page1')}
         >
           Navigate to Page 1
         </IonButton>
-        <IonButton expand="block" onClick={() => router.push('/reimbursement')}>
-          Navigate to Reimbursement
+        <IonButton
+          expand="block"
+          onClick={() => router.push('/reimbursement/page2')}
+        >
+          Navigate to Page 2
         </IonButton>
       </IonContent>
     </IonPage>
   );
 };
 
-export default Page2;
+export default Debug;
